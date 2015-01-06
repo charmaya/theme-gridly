@@ -1,3 +1,11 @@
+charmaya edits
+============
+tags menu at top
+static page menu at top
+font awesome icons
+box border
+
+
 theme-gridly
 ============
 
@@ -5,7 +13,7 @@ The official theme repo for Gridly. Fork this to use it as a boilerplate.
 
 ## Getting Started
 
-This theme uses LESS for CSS precompiling, and it uses Gulp for compiling the LESS into CSS, and also for concatenating and minifying JavaScript files.
+This theme uses LESS for CSS precompiling, and it uses Gulp for compiling the LESS into CSS, and also for concatenating and minifying JavaScript files. 
 
 _Note: You do not need LESS and Gulp to use this theme, you can just edit the CSS directly if you like. LESS and Gulp are for advanced users._
 
