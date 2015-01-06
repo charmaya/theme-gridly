@@ -1,9 +1,9 @@
 charmaya edits
 ============
-tags menu at top
-static page menu at top
-font awesome icons
-box border
+1. tags menu at top
+2. static page menu at top
+3. font awesome icons
+4. box border
 
 
 theme-gridly
