@@ -3,8 +3,8 @@ charmaya edits
 1. tags menu at top
 2. static page menu at top
 3. font awesome icons
-4. box border
-
+4. post-box border
+5. "back to top" button
 
 theme-gridly
 ============
