@@ -58,9 +58,15 @@
               <li><a href="/tag/eatsmi" class="{{ set_active('/tag/eatsmi') }}">[MI <i class="fa fa-cutlery"></i>]</a></li>
               <li><a href="/tag/eatsca" class="{{ set_active('/tag/eatsca') }}">[CA <i class="fa fa-cutlery"></i>]</a></li>
               <li><a href="/tag/eatsatw" class="{{ set_active('/tag/eatsatw') }}">[ATW <i class="fa fa-cutlery"></i>]</a></li>
-              <li><a href="/tag/recipe" class="{{ set_active('/tag/recipe') }}">[<i class="fa fa-file-text-o"></i>]</a></li>
+              <li><a href="/tag/recipe" class="{{ set_active('/tag/recipe') }}">[<i class="fa fa-file-text-o"></i><i class="fa fa-cutlery"></i>]</a></li>
               <li><a href="/tag/adventure" class="{{ set_active('/tag/adventure') }}">[<i class="fa fa-globe"></i>]</a></li>
               <li><a href="/tag/learn" class="{{ set_active('/tag/learn') }}">[<i class="fa fa-book"></i>]</a></li>
+              <br>
+              <ul class="tags">
+              {% for tag in site.tags %}
+              <li><a href="/tag/{{ tag.name }}">#{{ tag.name }}</a></li>
+              {% endfor %}
+              </ul>
               <br>
               {% if pages %}
               {% for page in pages %}
@@ -73,43 +79,18 @@
         <div class="social-icons">
           <ul>
             {% if site.twitter %}
-            <li>
-              <a href="{{ site.twitter }}" title="Twitter" target="_blank">
-                <i class="icon-twitter"></i>
-                <span class="hide-text">Twitter</span>
-              </a>
-            </li>
+            <li><a href="{{ site.twitter }}" title="Twitter" target="_blank"><i class="icon-twitter"></i><span class="hide-text">Twitter</span></a>            </li>
             {% endif %}
             {% if site.facebook %}
-            <li>
-              <a href="{{ site.facebook }}" title="Facebook" target="_blank">
-                <i class="icon-facebook"></i>
-                <span class="hide-text">Facebook</span>
-              </a>
-            </li>
+            <li><a href="{{ site.facebook }}" title="Facebook" target="_blank"><i class="icon-facebook"></i><span class="hide-text">Facebook</span></a></li>
             {% endif %}
             {% if site.googleplus %}
-            <li>
-              <a href="{{ site.googleplus }}?rel=author" title="Google+" target="_blank">
-                <i class="icon-google-plus"></i>
-                <span class="hide-text">Google Plus</span>
-              </a>
-            </li>
+            <li><a href="{{ site.googleplus }}?rel=author" title="Google+" target="_blank"><i class="icon-google-plus"></i><span class="hide-text">Google Plus</span></a></li>
             {% endif %}
             {% if site.linkedin %}
-            <li>
-              <a href="{{ site.linkedin }}" title="LinkedIn" target="_blank">
-                <i class="icon-linkedin"></i>
-                <span class="hide-text">LinkedIn</span>
-              </a>
-            </li>
+            <li><a href="{{ site.linkedin }}" title="LinkedIn" target="_blank"><i class="icon-linkedin"></i><span class="hide-text">LinkedIn</span></a></li>
             {% endif %}
-            <li>
-              <a href="{{ site.atom_url }}" title="RSS" target="_blank">
-                <i class="icon-rss"></i>
-                <span class="hide-text">RSS</span>
-              </a>
-            </li>
+            <li><a href="{{ site.atom_url }}" title="RSS" target="_blank"><i class="icon-rss"></i><span class="hide-text">RSS</span></a></li>
           </ul>
         </div>
       </header>
