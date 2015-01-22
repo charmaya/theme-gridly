@@ -62,10 +62,22 @@
               <li><a href="/tag/adventure" class="{{ set_active('/tag/adventure') }}">[<i class="fa fa-globe"></i>]</a></li>
               <li><a href="/tag/learn" class="{{ set_active('/tag/learn') }}">[<i class="fa fa-book"></i>]</a></li>
               <br>
-              <ul class="tags">
-              {% for tag in site.tags %}
-              <li><a href="/tag/{{ tag.name }}">#{{ tag.name }}</a></li>
-              {% endfor %}
+              <ul class="search">
+              <li>
+                <script>
+  (function() {
+    var cx = '006601233439532260446:4kae49nzxco';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+              </li>
               </ul>
               <br>
               {% if pages %}
