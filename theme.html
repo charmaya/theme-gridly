@@ -140,7 +140,10 @@
               {% endif %}
             </div>
           </article>
-
+          <div>{% for is_tag}
+            {{ count(posts) }}
+            {% endif %}
+          </div>
         {% endfor %}
         </section>
         {% if not is_tag %}
