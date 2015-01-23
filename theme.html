@@ -142,9 +142,9 @@
           </article>
           <div>
           {% trans count=list|length %}
-          There is {{ posts.count }} {{ name }} post.
+          There is {{ count(posts) }} {{ name }} post.
           {% pluralize %}
-          There are {{ posts.count }} {{ name }} posts.
+          There are {{ count(posts) }} {{ name }} posts.
           {% endtrans %}
           </div>
         {% endfor %}
