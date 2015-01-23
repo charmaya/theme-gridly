@@ -99,8 +99,9 @@
 
       {% if is_home or is_tag %}
       <div class="post-area">
+
         {% if is_tag %}
-        <h2 class="tag-head" style="font-face: verdana; color: grey;">all posts tagged {{ tag }}:</h2>
+        <h2 class="tag-head" style="font-face: verdana; color: grey;">all {{ tag.count }} posts tagged {{ tag }}:</h2>
         {% endif %}
 
         {% if posts %}
@@ -134,7 +135,7 @@
               <p class="post-tags">{{- post.tags|format_tags(humanize=True) -}}</p>
               {% endif %}
               {% if post.content|striptags|wordcount > 0 %}
-              <p>{{ post.content|striptags|truncate(s, length=200, killwords=False, end='..') }}</p>
+              <p>{{ post.content|striptags|truncate(200) }}</p>
               <p class="post-link"><a href="{{ post.permalink }}">View more &rarr;</a></p>
               {% endif %}
             </div>
@@ -148,7 +149,7 @@
         </div>
         {% endif %}
         {% else %}
-        <h2 class="title"><em>No posts yet! Check back soon.</em></h2>
+        <h2 class="title"><em>No posts yet :(</em></h2>
         {% endif %}
 
       {% elif post.type == 'post' %}
@@ -256,7 +257,7 @@
 
 <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i> Up</a>
 
-<script> <!-- back to top -->
+<script>
   jQuery(document).ready(function() {
     var offset = 220;
     var duration = 500;
