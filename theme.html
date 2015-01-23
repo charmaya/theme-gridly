@@ -140,9 +140,12 @@
               {% endif %}
             </div>
           </article>
-          <div>{% for is_tag %}
-            {{ count(posts) }}
-            {% endif %}
+          <div>
+          {% trans posts_count=list|length %}
+          There is {{ count }} {{ name }} post.
+          {% pluralize %}
+          There are {{ count }} {{ name }} posts.
+          {% endtrans %}
           </div>
         {% endfor %}
         </section>
