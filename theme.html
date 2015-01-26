@@ -101,7 +101,8 @@
       <div class="post-area">
 
         {% if is_tag %}
-        <h2 class="tag-head" style="font-face: verdana; color: grey;">all {{ tag.count }} posts tagged {{ tag }}:</h2>
+        {% set tag_count = tag.count %}
+        <h2 class="tag-head" style="font-face: verdana; color: grey;">all {{ tag_count }} posts tagged {{ tag }}:</h2>
         {% endif %}
 
         {% if posts %}
