@@ -102,7 +102,7 @@
 
         {% if is_tag %}
         {% set tagcount = posts|length %}
-        <h2 class="tag-head" style="font-face: verdana; color: grey;">all {{ tagcount }} {% if tagcount == 1 %}post{% else %}posts{% endif %} tagged {{ tag }}:</h2>
+        <h2 class="tag-head" style="font-face: verdana; color: grey;">all {{ tagcount }} {% if tagcount != 1 %}post{% else %}posts{% endif %} tagged {{ tag }}:</h2>
         {% endif %}
 
         {% if posts %}
